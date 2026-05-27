@@ -152,7 +152,114 @@ footer{border-top:1px solid var(--g90);padding:28px 56px;display:flex;align-item
 .hero>*:nth-child(4){animation-delay:.46s}
 .hero>*:nth-child(5){animation-delay:.6s}
 .hero>*:nth-child(6){animation-delay:.74s}
-</style>
+@media(max-width:640px){
+
+  /* ── NAV: hide links, show logo + brand only ── */
+  nav{padding:12px 16px}
+  .nav-lw{gap:10px}
+  .nav-li{height:28px}
+  .nav-br{font-size:11px;letter-spacing:.14em}
+  .nav-links{display:none}
+
+  /* ── HERO ── */
+  .hero{padding:100px 24px 60px}
+  .htl{top:72px;left:16px}
+  .hbr{bottom:56px;right:16px}
+  .hlogo img{height:52px}
+  .htitle{font-size:56px}
+  .htagline{font-size:15px}
+
+  /* ── SECTIONS ── */
+  .sec{padding:56px 20px}
+  .sec-ttl{font-size:32px}
+  .sec-desc{font-size:14px;margin-bottom:32px}
+
+  /* ── SIZE GUIDE: horizontal scroll ── */
+  .size-stage{
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    gap:20px;padding:32px 20px 28px;
+    scroll-snap-type:x mandatory;
+  }
+  .si{min-width:80px;scroll-snap-align:start;flex-shrink:0}
+  .sibar{margin-top:8px}
+  #sInfo{font-size:13px}
+
+  /* ── PAPER TYPES: single column ── */
+  .pgrid{grid-template-columns:1fr}
+  .pc{padding:28px 24px}
+
+  /* ── PRICING TOGGLE ── */
+  .ptoggle{width:100%}
+  .tbtn{flex:1;padding:12px 8px;font-size:11px}
+
+  /* ── PRICE TABLE: hide header, stack each row as card ── */
+  .pthd.c4{display:none}
+  .ptr.c4{
+    grid-template-columns:1fr;
+    gap:6px;padding:18px 20px;
+  }
+  .ptr.c4 .psl{font-size:17px}
+  /* each price cell gets a label prefix */
+  .ptr.c4>div:not(:first-child){
+    display:flex;align-items:center;justify-content:space-between;
+    padding:4px 0;border-top:1px solid var(--g90);
+  }
+  .ptr.c4>div:not(:first-child)::before{
+    font-family:var(--cond);font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--g70);
+  }
+  .ptr.c4>div:nth-child(2)::before{content:"Lustre Pro"}
+  .ptr.c4>div:nth-child(3)::before{content:"Enhanced Matte"}
+  .ptr.c4>div:nth-child(4)::before{content:"Cotton Rag"}
+  .ptr.c4 .ppr{text-align:right;font-size:17px}
+
+  /* canvas table: keep 2-col but tighten */
+  .pthd.c2{padding:10px 20px}
+  .ptr.c2{grid-template-columns:1fr auto;gap:8px;padding:16px 20px}
+  .ptr.c2 .ppr{font-size:20px}
+  .psl{font-size:16px}
+  .ptnote{font-size:11px;padding:0 4px}
+
+  /* ── FRAME FINISHES: 2 columns ── */
+  .fgrid{grid-template-columns:1fr 1fr;gap:12px}
+  .finish-swatch{height:72px}
+  .finfo{padding:14px 14px}
+  .fname{font-size:11px}
+  .ftone{font-size:11px}
+
+  .grow{grid-template-columns:1fr;gap:12px}
+
+  /* ── INCLUDES: 2 columns ── */
+  .igrid{grid-template-columns:1fr 1fr}
+  .iitem{padding:20px 16px}
+  .ittl{font-size:10px}
+  .idesc{font-size:12px}
+
+  /* ── HOW TO ORDER: vertical stack ── */
+  .steps{
+    flex-direction:column;align-items:flex-start;
+    gap:24px;margin-bottom:36px;max-width:100%;
+  }
+  .step{
+    flex-direction:row;text-align:left;
+    gap:16px;padding:0;align-items:flex-start;
+  }
+  .step::after{display:none}
+  .stepn{flex-shrink:0;margin-bottom:0;margin-top:2px}
+  .stepttl{font-size:12px}
+  .stepdesc{font-size:13px}
+
+  /* ── CTA ── */
+  .cta{padding:32px 24px}
+  .ctah{font-size:24px}
+  .ctaem{font-size:11px;word-break:break-all}
+
+  /* ── FOOTER ── */
+  footer{flex-direction:column;gap:8px;text-align:center;padding:24px 20px}
+  .fl{justify-content:center}
+  .fnote{font-size:9px}
+}
+
 </head>
 <body>
 
